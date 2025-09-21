@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Fortune Maker</h1>
+
+    <!-- Step 1: Greeting -->
+    <input id="nameInput" placeholder="type your name here" />
+    <button id="greetBtn">Greet me</button>
+    <p id="greetingOutput"></p>
+
+    <!-- Step 2: Three fortunes -->
+    <button id="showThreeBtn">Show a fortune (3)</button>
+    <p id="fortuneDisplay"></p>
+
+    <!-- Step 3: GPT fortunes -->
+    <button id="showGptBtn">Show a GPT fortune (10)</button>
+    <p id="gptFortuneDisplay"></p>
+
+    <script>
+      // STEP 1: Greeting --------------------------
+      document.getElementById('greetBtn').addEventListener('click', () => {
+        let name =document.getElementById("nameInput").value;
+        const greeting = `Good morning, ${name}.`;
+        document.getElementById('greetingOutput').textContent = greeting;
+      });
+        const fortune1="you get something good";
+        const fortune2="you will have a great day";
+        const fortune3="you will learn a lot";
+        const threeFortunes=[fortune1,fortune2,fortune3];
+      document.getElementById("showThreeBtn").addEventListener('click', () => {
+        const randomindex = Math.floor(Math.random() * threeFortunes.length);
+        document.getElementById("fortuneDisplay").textContent = threeFortunes[randomindex];
+      });
+
+      // STEP 2: Three fortunes --------------------
+      // TODO: Create three fortune variables
+      // Example: const fortune1 = 'You will smile today';
+
+      // TODO: Put them in an array
+      // Example: const threeFortunes = [fortune1, fortune2, fortune3];
+
+      // TODO: When button is clicked, show the first one in fortuneDisplay
+      // Example: document.getElementById('fortuneDisplay').textContent = threeFortunes[0];
+      
+      // STEP 3: GPT fortunes ----------------------
+      // TODO: Paste the array GPT gives you, and display a random one when button is clicked
+      // HINT: Use Math.random() and Math.floor()
+      // Example:
+      // const gptFortunes = [
+      //   'A surprise will bring joy soon.',
+      //   ...
+      // ];
+    </script>
+  </body>
+</html>
